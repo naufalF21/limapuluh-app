@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 async function getData() {
-	const res = await fetch('https://limapuluh-7flpoa6bi-naufalfirman.vercel.app/api/questions');
+	const res = await fetch('https://limapuluh-app.vercel.app/api/questions');
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
