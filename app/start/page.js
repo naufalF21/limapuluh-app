@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 async function getData() {
-	const res = await fetch('http://localhost:3000/api/questions');
+	const res = await fetch('/api/questions');
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
