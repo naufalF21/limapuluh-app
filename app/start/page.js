@@ -3,12 +3,14 @@
 import ProgressBar from '@/app/components/progressBar';
 import Question from '@/app/components/question';
 import BtnAnswer from '@/app/components/btnAnswer';
-import { use, useEffect } from 'react';
+import React, { use, useEffect, lazy } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 async function getData() {
-	const res = await fetch('https://limapuluh-app.vercel.app/api/questions');
+	const url = '/api/questions';
+
+	const res = await fetch(url);
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
