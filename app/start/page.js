@@ -3,13 +3,13 @@
 import ProgressBar from '@/app/components/progressBar';
 import Question from '@/app/components/question';
 import BtnAnswer from '@/app/components/btnAnswer';
-import React, { use, useEffect, lazy } from 'react';
+import React, { use, useEffect } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import useSWR from 'swr';
 
 async function getData() {
 	const url = '/api/questions';
-
 	const res = await fetch(url);
 
 	if (!res.ok) {
